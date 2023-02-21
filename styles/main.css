@@ -1,0 +1,96 @@
+body {
+  background-color: black;
+  color: #d9d9d9;
+  font-family: "Consolas", monospace;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.header__connectionStatus {
+  color: #0F0;
+}
+
+.chat__output {
+  display: flex;
+  justify-content: space-between;
+}
+.chat__output__messages {
+  list-style: none;
+  border: 1px solid #d9d9d9;
+  min-height: 200px;
+  width: 60%;
+  display: none;
+  margin: 0;
+  padding: 10px;
+}
+.chat__output__users {
+  border: 1px solid #d9d9d9;
+  width: 30%;
+  display: none;
+}
+.chat__output__users > h4 {
+  text-align: center;
+}
+
+#userNameForm > div {
+  display: flex;
+  width: 300px;
+  margin: 0 auto;
+  justify-content: center;
+}
+#userNameForm > div > label {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+#userNameForm > p {
+  margin: 0;
+  text-align: center;
+  color: #6d6d6d;
+  font-size: 10px;
+  padding: 0 110px 0 0;
+}
+
+#userNameInput {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#messageForm {
+  display: none;
+}
+
+input, label {
+  display: block;
+}
+
+input {
+  outline: none;
+  border: none;
+  background-color: black;
+  color: #d9d9d9;
+  padding: 1em 0.5em;
+  display: block;
+  font-size: 1.5em;
+  font-family: "Consolas", monospace;
+  flex: 1;
+}
+
+input::placeholder {
+  color: rgba(217, 217, 217, 0.5);
+}
+
+label {
+  display: block;
+  padding: 1em 0.5em;
+  font-size: 1.5em;
+}
+
+.privateMessage {
+  color: #1883de;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta
+        name="viewport"
+        content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"
+    >
+    <title>Чатик</title>
+    <link
+        rel="stylesheet"
+        href="styles/main.css"
+    >
+    <script
+        src="script/main.js"
+        defer
+    ></script>
+</head>
+
+<body>
+<header class="header">
+    <h1>Чатик</h1>
+    <span>Статус подключения:</span>
+    <span class="header__connectionStatus">OFFLINE</span>
+</header>
+
+<main class="chat">
+    <div class="chat__output">
+        <div class="chat__output__users">
+            <h4>Пользователи онлайн:</h4>
+            <ul class="chat__output__users__list"></ul>
+        </div>
+        <ul class="chat__output__messages"></ul>
+    </div>
+
+    <form id="userNameForm">
+        <div>
+            <label for="userNameInput">
+                &gt;
+            </label>
+            <input
+                type="text"
+                id="userNameInput"
+                autofocus
+                autocomplete="off"
+                placeholder="Ваше Имя"
+                maxlength="16"
+                required
+                pattern="[A-Za-z]+"
+                title="От 1 до 16 латинских букв"
+            >
+        </div>
+        <p>от 1 до 16 латинских букв</p>
+    </form>
+    <form id="messageForm">
+        <label for="messageInput">
+            &gt;
+        </label>
+        <input
+            type="text"
+            id="messageInput"
+            autocomplete="off"
+            placeholder="Введите сообщение (приват через @имя_пользователя сообщение)"
+            maxlength="500"
+        >
+    </form>
+</main>
+</body>
+</html>
