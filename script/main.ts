@@ -41,6 +41,7 @@ function setConnectionStatus (value: string) {
     if (!connectionStatusElement) {
         return
     }
+
     connectionStatusElement.innerHTML = value
 }
 
@@ -67,9 +68,7 @@ function handleIncomingData (data: IncomingMessage) {
         return
     }
 
-    if (data) {
-        printMessage(data)
-    }
+    printMessage(data)
 }
 
 function updateUsersList (usersArray: User[]) {

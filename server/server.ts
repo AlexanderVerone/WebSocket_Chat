@@ -140,16 +140,19 @@ server.on('connection', (ws, request) => {
     const joinRoom = (roomIdentifier: string, userTo: User) => {
         if (!userTo || !userTo.userEntity) {
             console.warn(`Failed to join user ${userTo.userName} to private room`)
+
             return
         }
 
         if (!Object.keys(rooms).includes(roomIdentifier)) {
             console.warn(`Room ${roomIdentifier} does not exist!`)
+
             return
         }
 
         if (rooms[roomIdentifier].length >= maxClients) {
             console.warn(`Room ${roomIdentifier} is full!`)
+
             return
         }
 
@@ -165,11 +168,13 @@ server.on('connection', (ws, request) => {
     const generateRoomKey = (keyLength: number): string => {
         let result = ''
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+
         for (let i = 0; i < keyLength; i++) {
             result +=characters.charAt(
                 Math.floor(Math.random() * characters.length)
             )
         }
+
         return result
     }
 
